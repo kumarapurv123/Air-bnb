@@ -1,0 +1,169 @@
+<section (window:scroll)="onScroll()" class="home main-layout">
+    <div class="teaser full">
+        <home-header [isTopZero]="isTopZero"></home-header>
+        <div class="hero-content">
+            <h1 class="hero-title">Find your next <span>perfect stay</span></h1>
+            <p class="hero-subtitle">Discover unique homes, experiences, and places around the world</p>
+            <button class="hero-cta" routerLink="/stay">Explore stays</button>
+        </div>
+        <div class="hero-scroll-hint">
+            <span class="material-symbols-outlined">expand_more</span>
+        </div>
+    </div>
+
+    <main>
+        <!-- Stats Bar -->
+        <div class="stats-bar">
+            <div class="stat">
+                <span class="stat-number">4M+</span>
+                <span class="stat-label">Active listings</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number">220+</span>
+                <span class="stat-label">Countries & regions</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number">100M+</span>
+                <span class="stat-label">Guest arrivals</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number">4.8★</span>
+                <span class="stat-label">Average rating</span>
+            </div>
+        </div>
+
+        <!-- Popular Cities -->
+        <div class="popular-cities">
+            <h2>Popular destinations</h2>
+            <p class="section-subtitle">Explore top cities loved by travelers worldwide</p>
+            <div class="places">
+                <article (click)="onClickPlace('Portugal')">
+                    <div class="img-wrap">
+                        <img src="https://res.cloudinary.com/du63kkxhl/image/upload/v1681631664/stay-home/portugal_me1ffx.jpg" alt="Portugal">
+                        <div class="overlay">
+                            <span class="explore-btn">Explore</span>
+                        </div>
+                    </div>
+                    <span class="name">Portugal</span>
+                    <span class="sub">Europe</span>
+                </article>
+                <article (click)="onClickPlace('Brazil')">
+                    <div class="img-wrap">
+                        <img src="https://res.cloudinary.com/du63kkxhl/image/upload/v1681631678/stay-home/brazil_r2x7pj.jpg" alt="Brazil">
+                        <div class="overlay">
+                            <span class="explore-btn">Explore</span>
+                        </div>
+                    </div>
+                    <span class="name">Brazil</span>
+                    <span class="sub">South America</span>
+                </article>
+                <article (click)="onClickPlace('United States')">
+                    <div class="img-wrap">
+                        <img src="https://res.cloudinary.com/du63kkxhl/image/upload/v1681631663/stay-home/usa_bqopcs.jpg" alt="United States">
+                        <div class="overlay">
+                            <span class="explore-btn">Explore</span>
+                        </div>
+                    </div>
+                    <span class="name">United States</span>
+                    <span class="sub">North America</span>
+                </article>
+                <article (click)="onClickPlace('Canada')">
+                    <div class="img-wrap">
+                        <img src="https://res.cloudinary.com/du63kkxhl/image/upload/v1681631665/stay-home/canada_vkm9fl.jpg" alt="Canada">
+                        <div class="overlay">
+                            <span class="explore-btn">Explore</span>
+                        </div>
+                    </div>
+                    <span class="name">Canada</span>
+                    <span class="sub">North America</span>
+                </article>
+            </div>
+        </div>
+
+        <!-- Why Airbnb Section -->
+        <div class="why-section">
+            <h2>Why choose Airbnb?</h2>
+            <p class="section-subtitle">Everything you need for the perfect trip</p>
+            <div class="why-cards">
+                <div class="why-card">
+                    <span class="material-symbols-outlined">verified_user</span>
+                    <h4>Verified listings</h4>
+                    <p>Every listing is reviewed and verified for quality and accuracy before guests arrive.</p>
+                </div>
+                <div class="why-card">
+                    <span class="material-symbols-outlined">support_agent</span>
+                    <h4>24/7 support</h4>
+                    <p>Our global team is available around the clock to help with any questions or issues.</p>
+                </div>
+                <div class="why-card">
+                    <span class="material-symbols-outlined">payments</span>
+                    <h4>Secure payments</h4>
+                    <p>Your payment is protected and only released to the host after you check in safely.</p>
+                </div>
+                <div class="why-card">
+                    <span class="material-symbols-outlined">diversity_3</span>
+                    <h4>Unique experiences</h4>
+                    <p>From treehouses to castles — find stays you won't find anywhere else.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Become Host -->
+        <div class="become-host">
+            <img src="https://res.cloudinary.com/du63kkxhl/image/upload/v1681631655/stay-home/become-host_d8giku.jpg" alt="Become a host">
+            <div class="content">
+                <span class="badge">For hosts</span>
+                <h2>Try hosting</h2>
+                <p>Earn extra income and unlock new opportunities by sharing your space</p>
+                <div class="host-stats">
+                    <div><strong>$1,200</strong><span>avg. monthly earnings</span></div>
+                    <div><strong>Free</strong><span>to list your space</span></div>
+                </div>
+                <button (click)="onNavigateToHost()">Become a Host</button>
+            </div>
+        </div>
+
+        <!-- Testimonials -->
+        <div class="testimonials">
+            <h2>What guests are saying</h2>
+            <p class="section-subtitle">Real reviews from real travelers</p>
+            <div class="testimonial-cards">
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"Absolutely stunning place. The host was incredibly welcoming and the views were breathtaking. Will definitely be back!"</p>
+                    <div class="author">
+                        <img src="https://i.pravatar.cc/40?img=1" alt="Sarah">
+                        <div>
+                            <strong>Sarah M.</strong>
+                            <span>New York, USA</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"Perfect location, spotless clean, and the host went above and beyond. Best Airbnb experience I've ever had!"</p>
+                    <div class="author">
+                        <img src="https://i.pravatar.cc/40?img=5" alt="James">
+                        <div>
+                            <strong>James K.</strong>
+                            <span>London, UK</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"Such a unique and cozy space. The neighborhood was vibrant and the amenities were top-notch. Highly recommend!"</p>
+                    <div class="author">
+                        <img src="https://i.pravatar.cc/40?img=9" alt="Mia">
+                        <div>
+                            <strong>Mia L.</strong>
+                            <span>Paris, France</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <app-footer class="full"></app-footer>
+</section>

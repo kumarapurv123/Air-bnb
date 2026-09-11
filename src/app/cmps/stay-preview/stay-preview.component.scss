@@ -1,0 +1,129 @@
+.stay-preview {
+  cursor: pointer;
+  transition: transform 0.2s;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+
+  .card-img-wrap {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+
+    .badges {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      display: flex;
+      gap: 6px;
+      z-index: 2;
+
+      .badge {
+        padding: 4px 10px;
+        border-radius: 20px;
+        font-size: 0.72rem;
+        font-weight: 600;
+        backdrop-filter: blur(6px);
+
+        &.top-rated {
+          background: rgba(255, 255, 255, 0.92);
+          color: #222;
+        }
+
+        &.new {
+          background: #222;
+          color: white;
+        }
+      }
+    }
+
+    .wishlist-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      z-index: 2;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+      line-height: 0;
+
+      svg {
+        width: 24px;
+        height: 24px;
+        fill: rgba(0, 0, 0, 0.35);
+        stroke: white;
+        stroke-width: 2.5;
+        transition: fill 0.2s, transform 0.2s;
+      }
+
+      &:hover svg {
+        transform: scale(1.15);
+      }
+
+      &.active svg {
+        fill: #FF385C;
+        stroke: #FF385C;
+      }
+    }
+  }
+
+  .details {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #717171;
+    padding-top: 10px;
+
+    .top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #222;
+
+      .loc {
+        font-weight: 600;
+        font-size: 0.95rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 75%;
+      }
+
+      .rate {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        font-size: 0.85rem;
+        color: #222;
+        white-space: nowrap;
+      }
+    }
+
+    .name {
+      width: 100%;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      color: #717171;
+      font-size: 0.875rem;
+    }
+
+    .room-type {
+      font-size: 0.85rem;
+      color: #aaa;
+      text-transform: capitalize;
+    }
+
+    .price {
+      margin-top: 4px;
+      span {
+        color: #222;
+        font-weight: 600;
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+<div *ngIf="stays?.length" class="list-header">
+  <span class="results-count">{{stays!.length}} stay{{stays!.length !== 1 ? 's' : ''}} found</span>
+</div>
+<ul *ngIf="stays?.length" class="stay-list">
+  <li *ngFor="let stay of stays">
+    <stay-preview [routerLink]="['', stay._id]" [stay]="stay"></stay-preview>
+  </li>
+</ul>
+<div *ngIf="!stays?.length" class="empty-list">
+  <span class="material-symbols-outlined empty-icon">search_off</span>
+  <h2>No stays found</h2>
+  <p>Try adjusting your search or filters to find what you're looking for.</p>
+  <img src="https://res.cloudinary.com/du63kkxhl/image/upload/v1681631046/stay/empty-list_ykhfmu.webp" alt="">
+</div>

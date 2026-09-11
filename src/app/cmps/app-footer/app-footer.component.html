@@ -1,0 +1,93 @@
+<footer class='app-footer full'>
+  <div class="footer-inner main-layout">
+    <div class='footer-content'>
+      <div class="footer-col">
+        <h4>Support</h4>
+        <ul>
+          <li>Help Center</li>
+          <li>Safety information</li>
+          <li>Cancellation options</li>
+          <li>Our COVID-19 Response</li>
+          <li>Supporting people with disabilities</li>
+          <li>Report a neighborhood concern</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Community</h4>
+        <ul>
+          <li>Airbnb.org: disaster relief housing</li>
+          <li>Combating discrimination</li>
+          <li>Invite friends</li>
+          <li>Gift cards</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Hosting</h4>
+        <ul>
+          <li>Airbnb your home</li>
+          <li>AirCover for Hosts</li>
+          <li>Explore hosting resources</li>
+          <li>Visit our community forum</li>
+          <li>How to host responsibly</li>
+          <li>Airbnb-friendly apartments</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>About</h4>
+        <ul>
+          <li>Newsroom</li>
+          <li>Learn about new features</li>
+          <li>Letter from our founders</li>
+          <li>Careers</li>
+          <li>Investors</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-left">
+        <span>© 2024 Airbnb Clone, Inc.</span>
+        <span class="dot">·</span>
+        <span>Privacy</span>
+        <span class="dot">·</span>
+        <span>Terms</span>
+        <span class="dot">·</span>
+        <span>Sitemap</span>
+      </div>
+      <div class="footer-social">
+        <a href="#" aria-label="Facebook">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+          </svg>
+        </a>
+        <a href="#" aria-label="Twitter">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
+          </svg>
+        </a>
+        <a href="#" aria-label="Instagram">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+            <circle cx="12" cy="12" r="4"/>
+            <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<footer class="mobile-footer main-layout full">
+  <div class="footer-content">
+    <img routerLink="/" class="logo" src="https://res.cloudinary.com/du63kkxhl/image/upload/v1681629704/logo_smny53.png" alt="">
+    <div class="menu" (click)="onToggleHeaderMenuModal()">
+      <fa-icon [icon]="faBars"></fa-icon>
+      <img [src]="getUserImg()" alt="">
+      <header-menu-modal (onToggleHeaderMenuModal)="onToggleHeaderMenuModal()"
+        (toggleLanguageModal)="onToggleLanguageModal()" [isOpenLanguageModal]="isOpenLanguageModal"
+        [isOpenFooter]="true" *ngIf="isShowHeaderMenuModal"></header-menu-modal>
+    </div>
+  </div>
+</footer>
+
+<language-modal (onToggleLanguageModal)="onToggleLanguageModal()" *ngIf="isOpenLanguageModal"></language-modal>

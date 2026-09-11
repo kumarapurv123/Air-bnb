@@ -1,0 +1,26 @@
+<section class="stay-preview">
+  <div class="card-img-wrap">
+    <img-carousel [stay]="stay"></img-carousel>
+    <div class="badges">
+      <span *ngIf="isTopRated()" class="badge top-rated">⭐ Top rated</span>
+      <span *ngIf="isNewListing()" class="badge new">New</span>
+    </div>
+    <button class="wishlist-btn" (click)="onToggleWishlist($event)" [class.active]="isWishlisted" title="Save to wishlist">
+      <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+        <path d="M16 28c-1-.9-12-8.5-12-16a8 8 0 0 1 12-6.9A8 8 0 0 1 28 12c0 7.5-11 15.1-12 16z"/>
+      </svg>
+    </button>
+  </div>
+  <div class="details">
+    <div class="top">
+      <div class="loc">{{stay.loc.city || stay.loc.address}}</div>
+      <div class="rate">
+        <fa-icon [icon]="faStar"></fa-icon>
+        <span>{{getRateAvg()}}</span>
+      </div>
+    </div>
+    <div class="name">{{stay.name}}</div>
+    <div class="room-type">{{stay.roomType}}</div>
+    <div class="price"><span>$ {{stay.price}}</span> / night</div>
+  </div>
+</section>
